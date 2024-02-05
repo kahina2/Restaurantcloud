@@ -111,10 +111,8 @@ $result->closeCursor();
   <!--banner-->
   <section id="banner">
     <div class="bg-color">
-      <header id="header">
-        <div class="container">
-          <a href="login.php" style="text-decoration: none; color:black;">Connexion</a>
-      </header>
+
+
       <div class="container">
         <div class="row">
           <div class="inner text-center">
@@ -366,6 +364,8 @@ $result->closeCursor();
         <div class="col-md-offset-3 col-md-6 text-center">
           <div class="widget">
             <h4 class="widget-title">Delicious</h4>
+            <a href="login.php" style="text-decoration: none; color:white;">Connexion</a>
+
             <address><?php echo $row3['adresse']; ?></address>
             <div class="social-list">
 
@@ -380,7 +380,7 @@ $result->closeCursor();
                   Licensing information: https://bootstrapmade.com/license/
                   Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Delicious
                 -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+              Designed by <a>Kahina Alitouche</a>
             </div>
             </p>
           </div>
