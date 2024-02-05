@@ -1,0 +1,21 @@
+services:
+  db:
+    container_name: kahinabase
+    image: mysql:latest
+    volumes:
+      - ./restaurant.sql:/docker-entrypoint-initdb.d/restaurant.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: kahina
+      MYSQL_DATABASE: restaurant
+      MYSQL_PASSWORD: ""
+    ports:
+      - "3307:3306"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8085:80"
+    depends_on:
+      - db
