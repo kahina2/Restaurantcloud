@@ -15,7 +15,7 @@ if (isset($_POST["seconnecter"])) {
         $_SESSION['connected'] = true;
         // laisser la session enregistrer
         $_SESSION['email'] = $_POST['email'];
-        header('Location:dashbord.html');
+        header('Location:dashbord.php');
     } else {
         $_SESSION['connected'] = false;
         header('Location:login.php');
