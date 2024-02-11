@@ -1,5 +1,5 @@
 services:
-  db_${SERVICE_NAME}:
+  db:
     container_name: kahinabase_${SERVICE_NAME}
     image: mysql:latest
     volumes:
@@ -20,4 +20,4 @@ services:
     ports:
       - "${PORT}:80"
     depends_on:
-      - db_${SERVICE_NAME}
+      - db
