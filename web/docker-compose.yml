@@ -14,6 +14,7 @@ services:
   web:
     build:
       context: .
+      container_name: kahinaweb
       dockerfile: Dockerfile
     image: applirestau
     ports:
