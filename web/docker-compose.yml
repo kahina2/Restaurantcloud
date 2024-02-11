@@ -14,8 +14,8 @@ services:
   web:
     build:
       context: .
-      container_name: kahinaweb
       dockerfile: Dockerfile
+    container_name: kahinaweb
     image: applirestau
     ports:
       - "${PORT}:80"
