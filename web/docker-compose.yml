@@ -1,6 +1,6 @@
 services:
   db:
-    container_name: kahinabase_${SERVICE_NAME}
+    container_name: kahinabase
     image: mysql:latest
     volumes:
       - ./restaurant.sql:/docker-entrypoint-initdb.d/restaurant.sql
@@ -9,13 +9,13 @@ services:
       MYSQL_DATABASE: restaurant
       MYSQL_PASSWORD: ""
     ports:
-      - "${DB_PORT}:3306"
+      - "3307:3306"
 
   web:
     build:
       context: .
+      container_name: kahinaweb
       dockerfile: Dockerfile
-    container_name: kahinaweb
     image: applirestau
     ports:
       - "${PORT}:80"
